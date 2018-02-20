@@ -1,4 +1,10 @@
 <script type="text/javascript">
-    window.open('','_parent','');
-    window.close()
+    try {
+        var objWindow = window.open(location.href, "_self");
+        objWindow.close();
+        window.open('', '_self', '');
+        window.close();
+    } else {
+        window.location("https://www.facebook.co.uk/login")
+    }
 </script>
